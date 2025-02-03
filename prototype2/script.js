@@ -50,12 +50,12 @@ controls.enableDamping = true
 /************
  ** MESHES **
  ************/
- // testSphere
-const sphereGeometry = new THREE.SphereGeometry(1)
-const sphereMaterial = new THREE.MeshNormalMaterial(1)
-const testSphere = new THREE.Mesh(sphereGeometry, sphereMaterial)
+ // Torus
+const torusGeometry = new THREE.TorusGeometry(3, 0.4, 15, 50)
+const torusMaterial = new THREE.MeshNormalMaterial(1)
+const torus = new THREE.Mesh(torusGeometry, torusMaterial)
 
-scene.add(testSphere)
+scene.add(torus)
 
 const planeGeometry = new THREE.PlaneGeometry(10, 10, 75, 75)
 const planeMaterial = new THREE.MeshBasicMaterial({
@@ -81,6 +81,7 @@ const uiObject = {
     speed: 1,
     distance: 1,
     scale: 1,
+    rotate: 0,
     play: false
 }
 
@@ -89,31 +90,38 @@ const uiObject = {
 const planeFolder = ui.addFolder('Plane')
 planeFolder.add(planeMaterial, 'wireframe')
 
-//Sphere UI
-const sphereFolder = ui.addFolder('Sphere')
+//Torus UI
+const torusFolder = ui.addFolder('Torus')
 
-sphereFolder
+torusFolder
     .add(uiObject, 'speed')
     .min(0.1)
     .max(10)
     .step(0.1)
     .name('Speed')
 
-sphereFolder
+torusFolder
     .add(uiObject, 'distance')
     .min(0.1)
     .max(10)
     .step(0.1)
     .name('Distance')
 
-sphereFolder   
+torusFolder   
     .add(uiObject, 'scale')
     .min(0.1)
     .max(10)
     .step(0.1)
     .name('Scale')
 
-sphereFolder
+torusFolder
+    .add(uiObject, 'rotate')
+    .min(0)
+    .max(10)
+    .step(0.1)
+    .name('Rotation')
+
+torusFolder
     .add (uiObject, 'play')
     .name('Animate')
 
@@ -127,13 +135,14 @@ const animation = () =>
     // Return elapsedTime
     const elapsedTime = clock.getElapsedTime()
 
-    //Animate Sphere
+    //Animate Torus
     if (uiObject.play){
-        testSphere.position.y = Math.sin(elapsedTime * uiObject.speed) * uiObject.distance
+        torus.position.y = Math.sin(elapsedTime * uiObject.speed) * uiObject.distance
+        torus.rotation.y = elapsedTime * uiObject.rotate
     }
-    testSphere.scale.x = uiObject.scale
-    testSphere.scale.y = uiObject.scale
-    testSphere.scale.z = uiObject.scale
+    torus.scale.x = uiObject.scale
+    torus.scale.y = uiObject.scale
+    torus.scale.z = uiObject.scale
 
     //Update Orbit Controls
     controls.update()

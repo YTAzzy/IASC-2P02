@@ -1,0 +1,43 @@
+h1 {
+    color:white;
+    font-size: 48px;
+    text-align: center;
+}
+
+body {
+    background-color: darkslategrey;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 95%;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+
+.webgl {
+    position: relative;
+    top: 0;
+    left: 0;
+    outline: none;
+    z-index: 2;
+}
+
+.essay {
+    color: white;
+    font-size: 24;
+    width: 100%;
+}
+
+.clickable {
+    color: deepskyblue;
+    cursor: cell;
+}
+
+.clickable:hover {
+    color: orange;
+}
+

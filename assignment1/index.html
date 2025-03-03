@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+    <title>Assignment 1</title>
+
+    <!-- css-->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- three.js importmap-->
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://ga.jspm.io/npm:three@0.172.0/build/three.module.js",
+            "OrbitControls": "https://ga.jspm.io/npm:three@0.168.0/examples/jsm/controls/OrbitControls.js",
+            "lil-gui": "https://ga.jspm.io/npm:lil-gui@0.20.0/dist/lil-gui.esm.js"
+
+          }
+        }
+        </script>
+
+        <!--three.js scene-->
+        <script src="script.js" type="module"></script>
+    
+</head>
+<body>
+  <div class="flexbox">
+
+    <!--ESSAY-->
+    <div class="essay">
+      <h2>1: Flatness</h2>
+      <p><span class="clickable" id="part-one">From Inside the Cave...</span></p>
+      <p>When the people inside the cave first begin to look out, they see nothing. An open expanse of endless opportunities. However, this vision is not meant to last for those 
+        inside the cave. As they grow, <span class="clickable" id="change-one">more obstacles are placed in their way,</span> keeping them locked to the same, boring paths in life 
+        that you are ‘expected’ to follow. Their elders tell them the way things are ‘supposed to be’ because it is the way they ‘have always been’. This is why they stay in the cave.
+         Not out of their own free will, but because they are trapped. They don’t know what will happen should they try to stray from the path set out for them. Besides, the bars of 
+         the cage must be far too rigid for escape, <span class="clickable" id="change-two">and the guards outside are on constant patrol.</span> Why risk challenging the status-quo 
+         when you have no concept of what punishments could await you for stepping out of line? So they stay there, in a prison of their own perception and their own making. Never 
+         trying to step out of line, and never again experiencing that same feeling of wonder and opportunity they saw so briefly when they were young.
+        </p>
+      <p>Nick Sousanis’s concept of Flatness can be defined as a limited perspective or way of viewing concepts. For this example, and to myself, flatness can represent the neat boxes 
+        that people are pushed to be a part of by society while growing up. I don’t believe children can necessarily be limited by flatness until taught it by the adults in their lives,
+         being told things like ‘You can’t do that, it’s against the rules’ or ‘No, that’s not who you are/should be!’ This is reflected on the cave wall by the children being unable to 
+         see the things that keep them inside. They haven’t been taught how things ‘ought to be’ yet, and therefore see nothing but the possibilities. But as they are put through the 
+         process of learning about how society functions, how things do and don’t work, and what rules need to be followed, the view they had when they were young, full of possibilities, 
+         becomes a cage, keeping them from going out and becoming the best version of themselves. Personally, this is reflective of how growing up in a religious and conservative 
+         household prevented me from feeling comfortable enough to be true to myself in terms of self-expression and sexual orientation. This Flat worldview kept me from being able to 
+         grow and be true to myself, and is still something I am trying to learn about to this day, as it keeps those in the cave from leaving. 
+      </p>
+      <h2>2: Seeing Double</h2>
+      <p><span class="clickable" id="part-two">From Outside the Cave...</span></p>
+      <p>When someone finally grows enough courage from sitting in the cave for so long, they will come to find the reality they had lived was heavily fabricated. What they perceived 
+        as jail cell bars were nothing but sticks in the sand, and the ever-vigilant guards were simply toy figures, giving the illusion of observation. It’s funny what being observed 
+        does to someone. It makes them feel small. It makes them feel weak. And finding out that all of those emotions you’ve been storing up inside you were for nothing? It makes you 
+        feel enraged. Those who escape the cave are likely to break apart the facade, <span class="clickable" id="change-three">tearing up and scattering the sticks</span> and 
+        <span class="clickable" id="change-four">breaking the figures from their track</span> to try and help those still trapped in the cave see the lie they are living. 
+        Unfortunately, this is not as effective as one could hope. Some people are in the cave because they prefer things that way. Some are too far gone to believe this life was 
+        fake. But the most common, and most upsetting, is denial and apathy. Even if they have heard that the outside is not what they believed, that things could be better, they are 
+        too scared to act on this knowledge. And so they stay inside, more afraid of taking a leap of faith and truly living than of dying a slow death inside this prison.
+      </p>
+      <p>Seeing Double is the ability to see that nothing is limited to one perspective, to one idea. To me, Seeing Double can come about as a realization. When someone finally realizes that maybe what those around them say isn’t the be-all end-all of how things are defined. That people can create their own opinions, their own points of view about anything, including themselves. The imaginary boxes that people try to fit everything into are not comprehensive of the way things are. In the scenario I have laid out, I was the person who made it out of the cave and ended up Seeing Double. It took me until late high school, but coming to the realization that I’m not bound by what people told me I need to be, what I need to act like, was earth-shattering for me. However, I know there are so many people who are too set in their ways to come to the realization, no matter how much you try to open their eyes. Some people will deny their own identity regardless of the pain it gives them because it’s ‘what they should do’ and never give a second thought to if they actually want to live that way. I know this because I was inside the cave, I experienced these things. I hated feeling like there was something wrong inside me, for knowing I wasn’t straight, and I pushed it down. But even if people had tried to help me realize it, some things can’t be taught to you. Some things just have to be realized... 
+      </p>
+    </div>      
+    
+    
+    <!--SCENE-->
+    <div class="scene">
+      <canvas class="webgl"></canvas>
+    </div>
+  </div>
+</body>

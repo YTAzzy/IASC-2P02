@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>Dataviz 1</title>
+
+    <!-- css-->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- three.js importmap-->
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://ga.jspm.io/npm:three@0.172.0/build/three.module.js",
+            "OrbitControls": "https://ga.jspm.io/npm:three@0.168.0/examples/jsm/controls/OrbitControls.js",
+            "lil-gui": "https://ga.jspm.io/npm:lil-gui@0.20.0/dist/lil-gui.esm.js"
+
+          }
+        }
+        </script>
+
+        <!--three.js scene-->
+        <script src="script.js" type="module"></script>
+    
+</head>
+<body>
+    <h1>Dataviz 1</h1>
+    <h2> <span style="color: red">She</span> <span style="color: orange">can't</span> <span style="color: yellow">run</span> <span style="color: green">from</span> <span style="color: blue">the</span> <span style="color: purple">urge</span></h2>
+    <h2> <span style="color: palevioletred">Stupid</span></h2>
+    <h1></h1>
+    <canvas class="webgl"></canvas>
+</body>
